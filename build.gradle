@@ -8,6 +8,29 @@
 
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+
+
+jar {  
+    manifest { 
+        attributes 'Main-Class': 'JavaFXDemo' 
+    } 
+} 
+
+
+eclipse { 
+    classpath { 
+        file { 
+            whenMerged { 
+          def jre = entries.find { it.path.contains 'org.eclipse.jdt.launching.JRE_CONTAINER' } 
+             jre.accessRules.add(new AccessRule('0', 'javafx/**')) 
+            }  
+        } 
+    } 
+} 
 
 // In this section you declare where to find the dependencies of your project
 repositories {
