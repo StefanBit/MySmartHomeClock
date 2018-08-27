@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -36,9 +37,18 @@ public class MySmartHomeClock extends Application {
 		time = new Label();
 		StackPane root = new StackPane();
 		root.getChildren().add(time);
-		primaryStage.setScene(new Scene(root, 300, 250));
-		time.setPrefHeight(primaryStage.getHeight());
-		time.setFont(new Font("Arial", 60));
+		primaryStage.setScene(new Scene(root, 640, 480));
+		time.setTextFill(Color.BLACK);
+		time.setStyle(""
+				+ "-fx-font-size:120; "
+				+ "-fx-max-width: 640; "
+				+ "-fx-max-height:480; "
+				+ "-fx-alignment: center; "
+				+ "-fx-text-fill: white; "
+				+ "-fx-border-color:red; "
+				+ "-fx-background-color: black; ");
+		
+		//time.setFont(new Font("Arial", 60));
 		primaryStage.show();
 		time.textProperty().bind(s.lastValueProperty());
 	}
@@ -53,7 +63,7 @@ public class MySmartHomeClock extends Application {
 	class TimegetterTask extends Task {
 		@Override
 		protected String call() throws Exception {
-			return LocalTime.now().toString();
+			return LocalTime.now().toString().substring(0, 5);
 		}
 	}
 }
