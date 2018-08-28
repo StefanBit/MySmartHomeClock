@@ -40,7 +40,7 @@ public class MySmartHomeClock extends Application {
 		primaryStage.setScene(new Scene(root, 800, 480));
 		time.setTextFill(Color.BLACK);
 		time.setStyle(""
-				+ "-fx-font-size:280; "
+				+ "-fx-font-size:240; "
 				+ "-fx-max-width: 800; "
 				+ "-fx-max-height:480; "
 				+ "-fx-alignment: center; "
