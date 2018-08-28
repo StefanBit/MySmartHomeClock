@@ -37,11 +37,11 @@ public class MySmartHomeClock extends Application {
 		time = new Label();
 		StackPane root = new StackPane();
 		root.getChildren().add(time);
-		primaryStage.setScene(new Scene(root, 640, 480));
+		primaryStage.setScene(new Scene(root, 800, 480));
 		time.setTextFill(Color.BLACK);
 		time.setStyle(""
-				+ "-fx-font-size:120; "
-				+ "-fx-max-width: 640; "
+				+ "-fx-font-size:280; "
+				+ "-fx-max-width: 800; "
 				+ "-fx-max-height:480; "
 				+ "-fx-alignment: center; "
 				+ "-fx-text-fill: white; "
