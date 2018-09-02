@@ -1,0 +1,8 @@
+.timeLabel{
+		-fx-font-size:240;
+				-fx-max-width: 800;
+				-fx-max-height:480;
+				-fx-alignment: center;
+				-fx-text-fill: white;
+				-fx-background-color: black;
+				}
